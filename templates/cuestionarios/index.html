@@ -1,0 +1,38 @@
+<p></p>
+{% extends "layout/admin.html" %}
+{% block page_title %}Respuestas{% endblock %}
+{% block title %}Respuestas{% endblock %}
+{% block content %}
+<table class="table table-bordered table-striped">
+    <thead>
+        <th>#</th>
+        <th>Fecha</th>
+        <th>Edad</th>
+        <th>Sexo</th>
+        <th>Carrera</th>
+        <th>P1</th>
+        <th>P2</th>
+        <th>P3</th>
+        <th>P4</th>
+        <th>P5</th>
+        <th>P6</th>
+    </thead>
+    <tbody>
+        {% for obj in objs %}
+        <tr>
+            <th>{{obj}}</th>
+            <th>{{obj.fecha}}</th>
+            <td>{{obj.edad}}</td>
+            <td>{{obj.sexo}}</td>
+            <td>{{obj.carrera}}</td>
+            <td>{{obj.p1}}</td>
+            <td>{{obj.p2}}</td>
+            <td>{{obj.p3}}</td>
+            <td>{{obj.p4}}</td>
+            <td>{{obj.p5}}</td>
+            <td>{{obj.p6}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,16 @@
+<p></p>
+{% extends "layout/admin.html" %}
+{% block page_title %}Cuestionario{% endblock %}
+{% block title %}Cuestionario{% endblock %}
+{% block content %}
+{% load bootstrap %}
+<div class="row">
+    <div class="col-sm-6">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form_cuestionario|bootstrap}}
+        </form>
+    </div>
+</div>
+{% endblock %}
+

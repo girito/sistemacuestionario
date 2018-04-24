@@ -1,0 +1,17 @@
+<p></p>
+{% extends "layout/admin.html" %}
+{% block page_title %}Usuario{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-6">
+        <br><p><b>Usuario</b></p>
+        <p><b>Username:</b> {{obj.usuario.username}}</p>
+        <p><b>E-mail:</b> {{obj.usuario.email}}</p>
+        <p><b>Estado:</b> {% if obj.usuario.is_active %}<span class="label label-success">Activo</span>{% else %}<span class="label label-danger">Suspendido</span>{% endif %}</p>
+        <p>
+        <a href="{% url 'usuarios_editar' obj.pk %}"><i class="fa fa-edit"></i> Editar</a>
+        | <a href="{% url 'usuarios_password' obj.pk %}"><i class="fa fa-pencil"></i> Cambiar contraseña</a>
+        </p><br>
+    </div>
+</div>
+{% endblock %}

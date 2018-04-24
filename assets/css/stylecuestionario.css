@@ -1,0 +1,37 @@
+#calendario {
+    max-width: 600px;
+    text-align: center;
+    margin: 0px auto;
+}
+#diasc{
+    width: 100%;
+    font-size: 19px;
+}
+#diasc th, #diasc td {
+    width:9%; height: 30px;
+}
+.dias{ margin: 2px; }
+#diasc th, #diasc td { text-align: center; }
+#anterior, #posterior { float: left; width: 100px; font: bold 20pt caption; padding: 9px; color: #fff; }
+#anterior i, #posterior i { transition: all 0.2s linear;  }
+#posterior { float: right !important; }
+#anterior i:hover, #posterior i:hover { text-shadow: 2px 2px 3px #555555; cursor: pointer;}
+#titulos { text-transform: uppercase; padding: 0.2em; color: #fff;}
+#calendario select { width: inherit; display: initial; }
+h2#titulos { margin-top: 0;}
+#calendario p { padding-top: 8px;   margin: 0;}
+#calendario form { margin-bottom: 0px; padding-bottom: 8px; background: #fff; }
+.col-sm-3 {
+    margin-top: 25px;
+}
+.btn-circle {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding: 3px;
+  font-size: 12px;
+  border-radius: 50%;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}

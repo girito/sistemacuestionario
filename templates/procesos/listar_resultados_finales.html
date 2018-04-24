@@ -1,0 +1,32 @@
+<p></p>
+{% extends "layout/admin.html" %}
+{% block page_title %}Resultados finales{% endblock %}
+{% block title %}Resultados finales{% endblock %}
+{% block content %}
+
+<li><a href="{% url 'proceso_2' %}">Actualizar resultados</a></li>
+<table class="table table-bordered table-striped">
+    <thead>
+        <th>Adolescente</th>
+        <th>Fecha</th>
+        <th>Edad</th>
+        <th>Sexo</th>
+        <th>Carrera</th>
+        <th>Trastorno</th>
+        <th>Indicador</th>
+    </thead>
+    <tbody>
+        {% for obj in objs %}
+        <tr>
+            <th>{{obj}}</th>
+            <th>{{obj.fecha}}</th>
+            <td>{{obj.edad}}</td>
+            <td>{{obj.sexo}}</td>
+            <td>{{obj.carrera}}</td>
+            <td>{{obj.trastorno_final}}</td>
+            <td>{{obj.indicador}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

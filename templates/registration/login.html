@@ -1,0 +1,22 @@
+{% extends "layout/base.html" %}
+{% block title %}Iniciar sesión {% endblock %}
+{% block content %}
+<style type="text/css">
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+</style>
+{% load bootstrap %}
+    <form method="POST" class="form-signin">
+    <h3 class="text-center">Camino Inca</h3>
+    {%csrf_token%}
+    {{form|bootstrap}}
+
+    <p class="text-center"><button title="Iniciar sesión" class="btn btn-primary btn-lg" type="submit"> <i class="fa fa-user"></i> Iniciar sesión</button></p>
+    <p class="text-right small"><a class="green-text" title="Recuperar contraseña" href="{% url 'password_reset' %}"> Recuperar contraseña</a></p>
+    </form>
+</div>
+</form>
+{% endblock %}

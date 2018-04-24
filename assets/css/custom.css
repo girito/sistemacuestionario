@@ -1,0 +1,16 @@
+body {
+  padding-top: 70px;
+}
+.zone-title{
+    font-size: 24px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 5px;
+}
